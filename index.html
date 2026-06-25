@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Little Surprise 💗</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fff5f8, #eaf7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.75);
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+h1 {
+    color: #ff5c8a;
+    font-size: 35px;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+.quote {
+    background: #ffffffaa;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    font-style: italic;
+}
+
+.hearts {
+    font-size: 30px;
+    animation: float 2s infinite;
+}
+
+.kiss {
+    font-size: 45px;
+    color: #ff4d79;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+button {
+    background: #ff7fa5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#secretPage {
+    display: none;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- PASSWORD PAGE -->
+
+<div id="lockPage">
+
+<h1>🔒 A Secret Surprise</h1>
+
+<p>Enter our secret word 💗</p>
+
+<input id="password" type="password" placeholder="Secret word">
+
+<br><br>
+
+<button onclick="unlock()">Open 💕</button>
+
+<p id="wrong" style="color:red;"></p>
+
+</div>
+
+
+<!-- MAIN PAGE -->
+
+<div id="secretPage">
+
+<h1>For Someone Special 💗</h1>
+
+<div class="hearts">
+💕 🌸 ✨ 🦋 💖
+</div>
+
+<p>
+I made this little place just to remind you that you are special 😊
+</p>
+
+
+<div class="quote">
+"Some people make normal days feel magical ✨"
+</div>
+
+
+<div class="quote">
+"Distance doesn't stop a heart from caring 💕"
+</div>
+
+
+<h2>🎵 Your Favourite Song</h2>
+
+<!-- Replace YOUR_SONG_ID with Spotify song ID -->
+
+<iframe
+style="border-radius:12px"
+src="https://open.spotify.com/embed/track/YOUR_SONG_ID"
+width="100%"
+height="152"
+frameBorder="0"
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+
+
+<br><br>
+
+<div class="kiss">
+mwaahhhh 💋
+</div>
+
+<div class="hearts">
+💗 💗 💗
+</div>
+
+<p>
+Made with care just for you 🌷
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+function unlock(){
+
+let pass = document.getElementById("password").value;
+
+if(pass === "yoursecret"){
+    
+document.getElementById("lockPage").style.display="none";
+document.getElementById("secretPage").style.display="block";
+
+}
+
+else{
+
+document.getElementById("wrong").innerHTML="Wrong secret word 😭";
+
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
